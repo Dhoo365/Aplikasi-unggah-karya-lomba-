@@ -1,0 +1,7 @@
+{
+  "name": "Sistem-unggah-karya-lomba",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
