@@ -141,7 +141,7 @@ function next() {
   else router.replace('/login');
 }
 function skip() {
-  router.replace('/login');
+  router.replace('/onboarding2');
 }
 </script>
 
