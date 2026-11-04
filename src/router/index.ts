@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
+
 import OnboardingPage from '../views/OnboardingPage.vue'
 import OnBoardingSlide2 from '@/views/OnBoardingSlide2.vue';
 import Beranda from '@/views/admin/Beranda.vue';
@@ -48,20 +49,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Talenta',
     component: Talenta
   },
-
-  // Slide 3: aktifkan setelah file-nya dibuat
-  // {
-  //   path: '/onboarding/3',
-  //   name: 'OnboardingSlide3',
-  //   component: () => import('../views/OnboardingSlide3.vue')
-  // },
-
-  // Sementara, supaya tombol "Lewati" dan tombol terakhir tidak error.
-  {
-    path: '/login',
-    name: 'Login',
-    component: OnboardingPage
-  },
+  
 ]
 
 const router = createRouter({

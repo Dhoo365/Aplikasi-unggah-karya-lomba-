@@ -179,15 +179,6 @@
       </div>
     </ion-content>
 
-    <ion-footer class="ion-no-border">
-      <nav class="tabs">
-        <a v-for="t in tabs" :key="t.to" :class="{ on: route.path === t.to }" @click="router.push(t.to)">
-          <ion-icon :icon="t.icon" />
-          <span>{{ t.label }}</span>
-        </a>
-      </nav>
-    </ion-footer>
-
     <div class="overlay" :class="{ show: drawer }" @click="drawer = false"></div>
     <aside class="drawer" :class="{ show: drawer }">
       <div class="drawer__head">
@@ -211,6 +202,8 @@
         <button class="logout" type="button"><ion-icon :icon="logOutOutline" /><span>Keluar Portal Admin</span></button>
       </div>
     </aside>
+
+    <AdminTabBar/>
   </ion-page>
 </template>
 
@@ -219,6 +212,7 @@ import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { IonPage, IonContent, IonFooter, IonIcon } from '@ionic/vue';
 import { shieldCheckmarkOutline, notificationsOutline, menuOutline, closeOutline, ribbon, arrowForwardOutline, searchOutline, checkmarkOutline, trophyOutline, peopleOutline, hammerOutline, ribbonOutline, checkmarkCircleOutline, checkmarkCircle, addCircleOutline, createOutline, trashOutline, documentTextOutline, chevronForwardOutline, personAddOutline, idCardOutline, clipboardOutline, optionsOutline, megaphoneOutline, cloudUploadOutline, businessOutline, gridOutline, statsChartOutline, settingsOutline, logOutOutline,} from 'ionicons/icons';
+import AdminTabBar from './AdminTabBar.vue';
 
 const route = useRoute();
 const router = useRouter();
@@ -268,13 +262,7 @@ const pengumuman = [
   { title: 'Hasil Seleksi Portofolio Vokasi IoT', sub: 'Menunggu TTD Kadis Pendidikan Kota Manado', badge: 'Draft SK', icon: createOutline, box: 'ann--dashed', tone: 'tone-amber' },
 ];
 
-const tabs = [
-  { label: 'Lomba', to: '/admin/lomba', icon: trophyOutline },
-  { label: 'Peserta', to: '/admin/peserta', icon: peopleOutline },
-  { label: 'Juri', to: '/admin/juri', icon: hammerOutline },
-  { label: 'Kriteria', to: '/admin/kriteria', icon: clipboardOutline },
-  { label: 'Talenta', to: '/admin/talenta', icon: ribbonOutline },
-];
+
 
 const menus = [
   { icon: gridOutline, label: 'Dashboard Utama' },

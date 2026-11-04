@@ -6,7 +6,10 @@
         :key="t.to"
         class="tabs__item"
         :class="{ 'tabs__item--active': route.path === t.to }"
-        @click="router.push(t.to)"
+        @click="() => {
+          console.log('Tombol ditekan:', t.to);
+          router.push(t.to);
+        }"
       >
         <ion-icon class="tabs__icon" :icon="t.icon" />
         <span class="tabs__label">{{ t.label }}</span>
@@ -24,11 +27,11 @@ const route = useRoute();
 const router = useRouter();
 
 const tabs = [
-  { label: 'Lomba', to: '/admin/lomba', icon: trophyOutline },
-  { label: 'Peserta', to: '/admin/peserta', icon: peopleOutline },
-  { label: 'Juri', to: '/admin/juri', icon: hammerOutline },
-  { label: 'Kriteria', to: '/admin/kriteria', icon: clipboardOutline },
-  { label: 'Talenta', to: '/admin/talenta', icon: ribbonOutline },
+  { label: 'Lomba', to: '/beranda', icon: trophyOutline },
+  { label: 'Peserta', to: '/peserta', icon: peopleOutline },
+  { label: 'Juri', to: '/juri', icon: hammerOutline },
+  { label: 'Kriteria', to: '/kriteria', icon: clipboardOutline },
+  { label: 'Talenta', to: '/talenta', icon: ribbonOutline },
 ];
 </script>
 
