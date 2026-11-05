@@ -9,6 +9,8 @@ import AdminJuri from '@/views/admin/AdminJuri.vue';
 import AdminKriteria from '@/views/admin/AdminKriteria.vue';
 import AdminTalenta from '@/views/admin/AdminTalenta.vue';
 
+import JuriLombaTugas from '@/views/juri/JuriLombaTugas.vue';
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -50,6 +52,12 @@ const routes: Array<RouteRecordRaw> = [
     component: AdminTalenta
   },
   
+  // juri //
+  {
+    path: '/berandajuri',
+    name: 'BerandaJuri',
+    component: JuriLombaTugas
+  }
 ]
 
 const router = createRouter({
