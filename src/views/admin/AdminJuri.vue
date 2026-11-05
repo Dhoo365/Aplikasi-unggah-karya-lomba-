@@ -113,30 +113,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { IonPage, IonContent, IonIcon } from '@ionic/vue';
-import {
-  shieldCheckmarkOutline,
-  notificationsOutline,
-  personCircleOutline,
-  idCardOutline,
-  hammerOutline,
-  shieldOutline,
-  checkmarkCircleOutline,
-  personAddOutline,
-  clipboardOutline,
-  searchOutline,
-  optionsOutline,
-  checkmarkOutline,
-  ellipsisVertical,
-  timeOutline,
-  fingerPrintOutline,
-  createOutline,
-  ribbonOutline,
-  documentTextOutline,
-  musicalNoteOutline,
-  colorPaletteOutline,
-  flaskOutline,
-  removeCircleOutline,
-} from 'ionicons/icons';
+import { shieldCheckmarkOutline, notificationsOutline, personCircleOutline, idCardOutline, hammerOutline, shieldOutline, checkmarkCircleOutline, personAddOutline, clipboardOutline, searchOutline, optionsOutline, checkmarkOutline, ellipsisVertical, timeOutline, fingerPrintOutline, createOutline, ribbonOutline, documentTextOutline, musicalNoteOutline, colorPaletteOutline, flaskOutline, removeCircleOutline, } from 'ionicons/icons';
 
 import AdminTabBar from './AdminTabBar.vue';
 
@@ -235,7 +212,6 @@ const juri = [
   margin: 0;
 }
 
-/* Top bar */
 .topbar {
   display: flex;
   align-items: center;

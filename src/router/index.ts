@@ -3,11 +3,11 @@ import { RouteRecordRaw } from 'vue-router';
 
 import OnboardingPage from '../views/OnboardingPage.vue'
 import OnBoardingSlide2 from '@/views/OnBoardingSlide2.vue';
-import Beranda from '@/views/admin/Beranda.vue';
-import Peserta from '@/views/admin/Peserta.vue';
-import Juri from '@/views/admin/Juri.vue';
-import Kriteria from '@/views/admin/Kriteria.vue';
-import Talenta from '@/views/admin/Talenta.vue';
+import AdminBeranda from '@/views/admin/AdminBeranda.vue';
+import AdminPeserta from '@/views/admin/AdminPeserta.vue';
+import AdminJuri from '@/views/admin/AdminJuri.vue';
+import AdminKriteria from '@/views/admin/AdminKriteria.vue';
+import AdminTalenta from '@/views/admin/AdminTalenta.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -27,27 +27,27 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/beranda',
     name: 'Beranda',
-    component: Beranda
+    component: AdminBeranda
   },
   {
     path: '/peserta',
     name: 'Peserta',
-    component: Peserta
+    component: AdminPeserta
   },
   {
     path: '/juri',
     name: 'Juri',
-    component: Juri
+    component: AdminJuri
   },
   {
     path: '/kriteria',
     name: 'Kriteria',
-    component: Kriteria
+    component: AdminKriteria
   },
   {
     path: '/talenta',
     name: 'Talenta',
-    component: Talenta
+    component: AdminTalenta
   },
   
 ]
